@@ -4,11 +4,12 @@ class Lampa{
     #divElem;
 
     constructor(id, allapot, szuloElem){
-        this.#id = 0;
+        this.#id =id;
+        //this.#allapot = allapot;
         this.#allapot = allapot;
         szuloElem.append(`<div class="lampa" id="${this.#id}"></div>`);
         this.#divElem = $(".lampa:last-child");
-
+        console.log("hello")
         this.setAllapot();
         this.#divElem.on("click", () => {
             this.#kattintasTrigger();

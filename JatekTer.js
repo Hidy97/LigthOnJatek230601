@@ -10,33 +10,34 @@ class JatekTer {
         this.#db = 0;
         this.#meret = 3;
         this.#lepes;
-        const szuloElem = $("article");
+        const szuloElem = $("article div");
+        this.#allapotLista = [false, true, false, false, false, true, true, false, false];
 
         for (let index = 0; index < this.#allapotLista.length; index++) {
-            const lampa = new Lampa(index, allapotLista[index], szuloElem);
+            const lampa = new Lampa(index, this.#allapotLista[index], szuloElem);
 
         }
 
-        this.#setAllapotList();
-
+        //this.#setAllapotLista();
+        /*
         $(window).on("kapcsolas", (event) => {
-            this.#db += 1;
         })
+        */
     }
 
-    #setAllapotList(){
-        this.#allapotLista = this.#meret * this.#meret;
+    #setAllapotLista() {
+        // this.#allapotLista = this.#meret * this.#meret;
     }
 
-    #szomszedokKeresese(id){
-
-    }
-
-    #init(){
+    #szomszedokKeresese(id) {
 
     }
 
-    #ellenorzes(){
+    #init() {
+
+    }
+
+    #ellenorzes() {
 
     }
 }
